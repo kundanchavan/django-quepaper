@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}20 Marks Form{% endblock title %}
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+<div class="container-fluid">
+    <h1 class=" text-danger">Enter your data </h1>
+    <div class="row">
+        <div class="col-6">
+
+            <div class="row">
+                <div class="col-6 mb-3">subject: {{form.sub}}</div>
+                <div class="col-6 mb-3">Date: {{form.date}}</div>
+            </div>
+
+            <div class="row">
+                <p>Enter quesion no.1</p>
+                <div class="col-12 mb-3">(a) {{form.Q1}} </div><br>
+                <div class="col-12 mb-3">(b) {{form.Q2}} </div><br>
+                <div class="col-12 mb-3">(c) {{form.Q3}} </div><br>
+                <div class="col-12 mb-3">(d) {{form.Q4}} </div><br>
+                <div class="col-12 mb-3">(e) {{form.Q5}} </div><br>
+                <div class="col-12 mb-3">(f) {{form.Q6}} </div><br>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <p class="mt-5">Enter question no.2</p>
+                <div class="col-12 mb-3">(a) {{form.Q2a}}</div>
+                <div class="col-12 mb-3">(b) {{form.Q2b}}</div>
+                <div class="col-12 mb-3">(c) {{form.Q2c}}</div>
+                <div class="col-12 mb-3">(d) {{form.Q2d}}</div>
+            </div>
+            <button type="submit" class="btn btn-warning" style="margin-top:110px; margin-left:70px; padding-left:30px; padding-right:30px;">Submit</button>
+        </div>
+    </div>
+</div>
+
+
+</form>
+
+{% endblock body %}
